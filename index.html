@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="CoFocus Icon1.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cofocus</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="CoFocus Icon1.png" alt="CoFocus productivity app logo"
+        /></a>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          CoFocus :<br />
+          Focus better.<br />Together.
+        </h1>
+        <p class="subtitle">
+          A calm digital space for students, researchers, and remote workers to
+          stay productive together.
+        </p>
+        <a href="#" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <div class="video-wrapper">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-label="Decorative video showing a calm study and workspace atmosphere"
+      >
+        <source src="video1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <section class="features" id="features">
+      <h2 class="section-title">Designed for deep focus</h2>
+      <p class="section-subtitle">
+        CoFocus helps students and professionals stay motivated through calm
+        online focus sessions
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">👥</div>
+          <h3>Focus Rooms</h3>
+          <p>
+            Join solo or group sessions and work together in calm digital space,
+            even when schedules or distance make meeting difficult.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">⏱️</div>
+          <h3>Focus Mode</h3>
+          <p>
+            Reduce distractions during sessions. Leaving the app can lower
+            points, while useful tools such as dictionaries can be allowed.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🏅</div>
+          <h3>Progress & Points</h3>
+          <p>
+            Collect points, track focus time, and build motivation through
+            friendly progress goals and optional group challenges.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="about">
+      <h2 class="section-title">About CoFocus</h2>
+      <p class="section-subtitle">
+        A productivity app for students, researchers, writers, and remote
+        workers.
+      </p>
+      <div
+        style="
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: center;
+          color: #ffffff;
+          font-size: 1.1rem;
+          line-height: 2;
+        "
+      >
+        <p>
+          CoFocus was created for people who want to stay focused without
+          feeling isolated. The app combines online focus rooms, gentle
+          accountability, customizable profiles, and progress tracking to
+          support healthier study and work habits.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="license.html">License</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="media.html">Media & Licenses</a>
+          <a href="impressum.html">Imprint</a>
+        </div>
+        <p class="copyright">&copy; 2026 CoFocus GmbH. All rights reserved.</p>
+      </div>
+    </footer>
+    <div class="cookie-banner" id="cookieBanner">
+      <p>
+        This website uses essential cookies and mock analytics cookies for
+        educational purposes. You can accept or decline optional cookies.
+        <a href="privacy.html">Read our Privacy Policy</a>.
+      </p>
+
+      <div class="cookie-buttons">
+        <button onclick="acceptCookies()">Accept</button>
+        <button onclick="declineCookies()">Decline</button>
+      </div>
+    </div>
+
+    <script>
+      const cookieBanner = document.getElementById("cookieBanner");
+
+      if (localStorage.getItem("cookieChoice")) {
+        cookieBanner.style.display = "none";
+      }
+
+      function acceptCookies() {
+        localStorage.setItem("cookieChoice", "accepted");
+        cookieBanner.style.display = "none";
+      }
+
+      function declineCookies() {
+        localStorage.setItem("cookieChoice", "declined");
+        cookieBanner.style.display = "none";
+      }
+
+      function hideNotice() {
+        document.getElementById("Banner").style.display = "none";
+      }
+    </script>
+    <div class="banner" id="Banner">
+      <h2>Educational Project Notice</h2>
+
+      <p>
+        CoFocus is a fictional software platform created for educational and
+        demonstration purposes as part of a university project. Any company
+        information, trademarks, registration details, or legal references
+        presented on this website are used solely to demonstrate the structure
+        and legal requirements of a realistic SaaS platform.
+      </p>
+
+      <div class="buttons">
+        <button onclick="hideNotice()">Okay</button>
+      </div>
+    </div>
+  </body>
+</html>
